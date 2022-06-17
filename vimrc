@@ -1,5 +1,33 @@
-let g:mapleader = ' '
+let g:mapleader = ' ' 
 filetype plugin on 
+
+"set efm=%I%\\x%\\{40}\ %l\ %\\d\ %\\d,%Cauthor\ %m,%C%.%#author-mail\ %m,%Cauthor-time\ %m,%Cauthor-tz\ %.%#,%Ccommitter\ %.%#,%C%.%#committer-mail%.%#,%Ccommitter-time\ %.%#,%Ccommitter-tz\ %.%#,%Csummary\%.%#,%C%.%#previous%.%#,%C%sfilename\ %f,%Z%m
+
+set efm=%I%m%*\\s%l%*\\s%\\d%*\\s%\\d,
+        \%Cauthor%*\\s%m,
+        \%Cauthor-mail%*\\s%m,
+        \%Cauthor-time%*\\s%m,
+        \%Cauthor-tz%*\\s%m,
+        \%Ccommitter%*\\s%m,
+        \%Ccommitter-mail%*\\s%m,
+        \%Ccommitter-time%*\\s%m,
+        \%Ccommitter-tz%*\\s%m,
+        \%Csummary%*\\s%m,
+        \%Cprevious%*\\s%m,
+        \%Cboundary,
+        \%Cfilename%*\\s%f,
+        \%Z%m
+
+
+
+vnoremap gb :<C-U>cexpr system('git blame -L' .. line("'<") .. ',' .. line("'>") .. ' -p ' .. expand('%'))<CR>
+"git blame -L2,3 -p hello
+
+"execute 'tab term git blame -L' . line("'<") . ',' . line("'>")  '-p' expand('%')
+
+"execute '!javap ' . shellescape('jar:file://' . expand('%') . '\!/' . expand('<cfile>'))
+"!javap 'jar:file:///home/rich/.m2/wrapper/dists/apache-maven-3.8.5-bin/67203e94/apache-maven-3.8.5/lib/maven-artifact-3.8.5.jar\!/org/apache/maven/artifact/versioning/VersionRange.class'
+
 
 augroup mansettings
     au!
