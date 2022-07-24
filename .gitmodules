@@ -1,0 +1,3 @@
+[submodule "pack/plugins/start/targets"]
+	path = pack/plugins/start/targets
+	url = https://github.com/wellle/targets.vim
