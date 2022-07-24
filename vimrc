@@ -1,6 +1,13 @@
 let g:mapleader = ' ' 
 filetype plugin on 
 
+augroup menhirsettings
+    au!
+    autocmd BufRead,BufNewFile *.mly nnoremap <buffer> <F8> :term menhir --interpret --interpret-show-cst %<CR>
+augroup end
+
+"git log --graph --decorate --oneline
+
 "set efm=%I%\\x%\\{40}\ %l\ %\\d\ %\\d,%Cauthor\ %m,%C%.%#author-mail\ %m,%Cauthor-time\ %m,%Cauthor-tz\ %.%#,%Ccommitter\ %.%#,%C%.%#committer-mail%.%#,%Ccommitter-time\ %.%#,%Ccommitter-tz\ %.%#,%Csummary\%.%#,%C%.%#previous%.%#,%C%sfilename\ %f,%Z%m
 
 set efm=%I%m%*\\s%l%*\\s%\\d%*\\s%\\d,
@@ -95,3 +102,9 @@ cnoremap <c-b>		<left>
 cnoremap <c-e>		<end>
 cnoremap <c-n>		<down>
 cnoremap <C-P>		<Up>
+
+" merlin configs
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" ocaml format configs
+set rtp^="/home/rich/.opam/4.14.0/share/ocp-indent/vim"
