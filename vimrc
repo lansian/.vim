@@ -1,5 +1,6 @@
 let g:mapleader = ' ' 
-filetype plugin on 
+filetype plugin indent on 
+packadd! matchit
 
 augroup menhirsettings
     au!
