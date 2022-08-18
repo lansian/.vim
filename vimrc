@@ -105,10 +105,10 @@ cnoremap <c-n>		<down>
 cnoremap <C-P>		<Up>
 
 " merlin configs
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-" ocaml format configs
-set rtp^="/home/rich/.opam/4.14.0/share/ocp-indent/vim"
+"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"execute "set rtp+=" . g:opamshare . "/merlin/vim"
+"" ocaml format configs
+"set rtp^="/home/rich/.opam/4.14.0/share/ocp-indent/vim"
 
 " text-objects.vim configs
 "
