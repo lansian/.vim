@@ -2,6 +2,8 @@ let g:mapleader = ' '
 filetype plugin indent on 
 packadd! matchit
 inoremap jk <esc>
+tnoremap <up> <Nop>
+tnoremap <down> <Nop>
 set foldlevelstart=99 
 set wildmode=list:lastused:longest,full
 set ignorecase
