@@ -25,7 +25,8 @@ hi IncSearch term=standout cterm=NONE ctermfg=15 ctermbg=1
 
 " text-objects.vim configs
 " use N instead of l to search backwards
-let g:targets_nl = 'nN'
+" needs to be a list or sourcing the script while vim is open breaks it
+let g:targets_nl = ['n', 'N']
 " enable growing and seeking to work on the largest available count if a too large 
 " ex v100ab will select the most outer block around the cursor
 " ex v100inq will select the most distant quote to the right/down (the last one in the file)
