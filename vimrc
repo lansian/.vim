@@ -124,3 +124,9 @@ let g:targets_gracious = 1
 set incsearch
 set hlsearch
 nnoremap <C-L> :nohls<cr><C-L>
+
+" vim surround config
+" have * surround with an /*
+" ds/ deletes the included *, even though this is undocumented behavior o_O
+let g:surround_42 = "/* \r */"
+
