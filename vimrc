@@ -120,3 +120,7 @@ let g:targets_nl = 'nN'
 " ex v100inq will select the most distant quote to the right/down (the last one in the file)
 let g:targets_gracious = 1
 
+" incsearch config
+set incsearch
+set hlsearch
+nnoremap <C-L> :nohls<cr><C-L>
