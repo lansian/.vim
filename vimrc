@@ -21,6 +21,7 @@ cnoremap <c-b>		<left>
 cnoremap <c-e>		<end>
 cnoremap <c-n>		<down>
 cnoremap <C-P>		<Up>
+hi IncSearch term=standout cterm=NONE ctermfg=15 ctermbg=1
 
 " text-objects.vim configs
 " use N instead of l to search backwards
@@ -105,5 +106,3 @@ nnoremap <Esc>5 <c-w>5gt
 " e.g. git blame -L2,3 -p hello
 " e.g. for debugging: execute 'tab term git blame -L' . line("'<") . ',' . line("'>")  '-p' expand('%')
 " unrelated useful one line: git log --graph --decorate --oneline
-
-
