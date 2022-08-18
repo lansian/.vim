@@ -109,3 +109,14 @@ let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 " ocaml format configs
 set rtp^="/home/rich/.opam/4.14.0/share/ocp-indent/vim"
+
+" text-objects.vim configs
+"
+" use N instead of l to search backwards
+let g:targets_nl = 'nN'
+"
+" enable growing and seeking to work on the largest available count if a too large 
+" ex v100ab will select the most outer block around the cursor
+" ex v100inq will select the most distant quote to the right/down (the last one in the file)
+let g:targets_gracious = 1
+
