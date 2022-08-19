@@ -4,8 +4,10 @@ packadd! matchit
 inoremap jk <esc>
 tnoremap <up> <Nop>
 tnoremap <down> <Nop>
+set nohidden
 set foldlevelstart=99 
-set wildmode=list:lastused:longest,full
+set wildmode=longest:full:list,full
+set wildignorecase
 set ignorecase
 set smartcase
 set completeopt=menu,menuone
@@ -19,8 +21,7 @@ nnoremap <C-L> :nohls<cr><C-L>
 cnoremap <c-a>		<home>
 cnoremap <c-b>		<left>
 cnoremap <c-e>		<end>
-cnoremap <c-n>		<down>
-cnoremap <C-P>		<Up>
+cnoremap <c-y>      <Down>
 hi IncSearch term=standout cterm=NONE ctermfg=15 ctermbg=1
 
 " text-objects.vim configs
